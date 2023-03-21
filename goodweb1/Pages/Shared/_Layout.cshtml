@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RazorPagesGeneral</title>
+
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/modernizer.js"></script>
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>
+</head>
+<body>
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__ball"></div>
+        </div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="left-top">
+                        <div class="email-box">
+                            <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> youremail@gmail.com</a>
+                        </div>
+                        <div class="phone-box">
+                            <a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 890</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="right-top">
+                        <div class="social-box">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
+                                <ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="images/logos/logo.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a class="@GetActive("/")" asp-area="" asp-page="/Index">Home</a></li>
+                        <li><a class="@GetActive("/about-us")" asp-area="" asp-page="/about-us">About us</a></li>
+                        <li><a class="@GetActive("/services")" asp-area="" asp-page="/services">Our Services</a></li>
+                        <li><a class="@GetActive("/portfolio")" asp-area="" asp-page="/portfolio">Portfolio</a></li>
+                        <li><a class="@GetActive("/features")" asp-area="" asp-page="/features">Features</a></li>
+                        <li><a class="@GetActive("/testimonials")" asp-area="" asp-page="/testimonials">Testimonials</a></li>
+                        <li><a class="@GetActive("/pricing")" asp-area="" asp-page="/pricing">Pricing</a></li>
+                        <li><a class="@GetActive("/contact")" asp-area="" asp-page="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="images/logos/logo-2.png" alt="" />
+                        </div>
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
+                        <p>Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Pages</h3>
+                        </div>
+
+                        <ul class="footer-links hov">
+                            <li><a href="#">Home <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Blog <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Pricing <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">About <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Faq <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Contact <span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-distributed widget clearfix">
+                        <div class="widget-title">
+                            <h3>Subscribe</h3>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which one know this tricks.</p>
+                        </div>
+
+                        <div class="footer-right">
+                            <form method="get" action="#">
+                                <input placeholder="Subscribe our newsletter.." name="search">
+                                <i class="fa fa-envelope-o"></i>
+                            </form>
+                        </div>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-company-name">
+                        All Rights Reserved. &copy; 2018 <a href="#">GoodWEB</a> Design By :
+                        <a href="https://html.design/">html design</a>
+                    </p>
+                </div>
+
+
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+    <!--<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>-->
+
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+
+@functions{
+    public string GetActive(string title)
+    {
+
+        string url = @Url.RouteUrl(ViewContext.RouteData.Values);
+        if (url == title)
+        {
+            return "active";
+        }
+        return "";
+    }
+}
